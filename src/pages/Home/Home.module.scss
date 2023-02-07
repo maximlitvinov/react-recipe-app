@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+
+.home {
+  width: 100%;
+}
+.sub_title {
+  text-align: center;
+  font-size: 25px;
+}
+.title {
+  text-align: center;
+  font-size: 45px;
+}
+.cards {
+  display: flex;
+  margin: 0 auto;
+  width: 95%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+ul.pages {
+  color: #b47768;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 250px;
+  list-style: none;
+
+  li.list {
+    transition: 0.3s;
+    cursor: pointer;
+    margin-left: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 2;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+    &:hover {
+      color: #fff;
+      background: $primary-color;
+    }
+  }
+}

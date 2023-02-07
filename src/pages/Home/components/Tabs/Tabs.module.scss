@@ -1,0 +1,28 @@
+@import '../../../../styles/variables.scss';
+
+.tabs {
+  margin-top: 20px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+.tabs__wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tab {
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 5px 10px;
+  color: $secondary-color;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  &:hover {
+    background: $background-color;
+    color: $primary-color;
+  }
+}

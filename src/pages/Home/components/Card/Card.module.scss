@@ -1,0 +1,45 @@
+@import '../../../../styles/variables.scss';
+
+.card {
+  display: flex;
+  margin-top: 40px;
+}
+.info__block {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: $primary-color;
+}
+.title {
+  background: $background-color;
+  border-radius: $border-radius;
+  margin: 0 auto;
+  padding: 0 5px;
+  width: 80%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 21px;
+}
+.subtitle {
+  margin-top: 10px;
+  margin-left: 55px;
+  display: flex;
+  width: 80%;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.icon__time,
+.icon__food {
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+.img {
+  border-radius: $border-radius;
+  margin: 0 auto;
+  width: 80%;
+  box-shadow: -3px 2px 12px 0px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: -3px 2px 12px 0px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: -3px 2px 12px 0px rgba(0, 0, 0, 0.54);
+}
