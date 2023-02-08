@@ -8,7 +8,7 @@ const Tabs = () => {
       value: 'Meals',
     },
     {
-      value: 'Deserts',
+      value: 'Desserts',
     },
     {
       value: 'Side Dish',
