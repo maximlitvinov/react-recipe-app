@@ -10,30 +10,30 @@ const Home = () => {
   const [recipe, setRecipe] = useState([]);
   const [valueSearch, setValueSearch] = useState('');
 
-  const apiKey = 'cf0da3ccec3b4c6a89fe48aeb8ee8f6a';
+  // const apiKey = 'cf0da3ccec3b4c6a89fe48aeb8ee8f6a';
 
-  async function fetchData() {
-    await fetch(
-      `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=8&tags=vegetarian,meal`,
-    )
-      .then((response) => response.json())
-      .then((data) => setRecipe(data.recipes)); //setRecipe(data.results)
-  }
+  // async function fetchData() {
+  //   await fetch(
+  //     `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=8&tags=vegetarian,meal`,
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => setRecipe(data.recipes)); //setRecipe(data.results)
+  // }
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
-  useEffect(() => {
-    const fetchRecipes = async () => {
-      await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=10&query=${valueSearch}`,
-      )
-        .then((response) => response.json())
-        .then((data) => console.log(data.results));
-    };
-    fetchRecipes();
-  }, [valueSearch]);
+  // useEffect(() => {
+  //   const fetchRecipes = async () => {
+  //     await fetch(
+  //       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=10&query=${valueSearch}`,
+  //     )
+  //       .then((response) => response.json())
+  //       .then((data) => console.log(data.results));
+  //   };
+  //   fetchRecipes();
+  // }, [valueSearch]);
 
   return (
     <div className={style.home}>

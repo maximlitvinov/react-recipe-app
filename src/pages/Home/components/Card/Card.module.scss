@@ -6,6 +6,7 @@
 }
 .info__block {
   display: flex;
+  width: 85%;
   justify-content: space-between;
   flex-direction: column;
   color: $primary-color;
@@ -25,10 +26,10 @@
   margin-top: 10px;
   margin-left: 55px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 80%;
-  text-align: center;
-  justify-content: space-between;
+  text-align: left;
 }
 
 .icon__time,
@@ -40,7 +41,7 @@
 .img {
   border-radius: $border-radius;
   margin: 0 auto;
-  width: 80%;
+  width: 76%;
   box-shadow: -3px 2px 12px 0px rgba(0, 0, 0, 0.54);
   -webkit-box-shadow: -3px 2px 12px 0px rgba(0, 0, 0, 0.54);
   -moz-box-shadow: -3px 2px 12px 0px rgba(0, 0, 0, 0.54);

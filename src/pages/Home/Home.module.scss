@@ -85,3 +85,17 @@ ul.pages {
     }
   }
 }
+.active__page {
+  transition: 0.3s;
+  cursor: pointer;
+  margin-left: 20px;
+  display: inline-block;
+  text-align: center;
+  line-height: 2;
+  width: 40px;
+  height: 40px;
+  border: 2px solid $primary-color;
+  border-radius: 50%;
+  color: #fff;
+  background: $primary-color;
+}

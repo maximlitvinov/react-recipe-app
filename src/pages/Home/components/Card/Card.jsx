@@ -18,10 +18,12 @@ const Card = ({ recipe, index }) => {
             Ready in: {recipe.readyInMinutes} minutes
           </div>
           <div>
-            <i className={style.icon__food}>
-              <IconLocationFood />
-            </i>
-            Type: {recipe.dishTypes + ''}
+            <span>
+              <i className={style.icon__food}>
+                <IconLocationFood />
+              </i>
+              Type: {recipe.dishTypes[0]}
+            </span>
           </div>
         </div>
       </div>
