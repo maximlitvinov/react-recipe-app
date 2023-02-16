@@ -4,7 +4,7 @@ import style from './Card.module.scss';
 import IconTimeOutline from '../../../../assets/icons/IconTimeOutline';
 import IconLocationFood from '../../../../assets/icons/IconLocationFood';
 
-const Card = ({ recipe, index }) => {
+const Card = ({ recipe }) => {
   return (
     <div className={style.card}>
       <div className={style.info__block}>

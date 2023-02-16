@@ -10,20 +10,23 @@ const Home = () => {
   const [recipe, setRecipe] = useState([]);
   const [valueSearch, setValueSearch] = useState('');
 
-  // const apiKey = 'cf0da3ccec3b4c6a89fe48aeb8ee8f6a';
+  const apiKey = 'cf0da3ccec3b4c6a89fe48aeb8ee8f6a';
 
-  // async function fetchData() {
-  //   await fetch(
-  //     `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=8&tags=vegetarian,meal`,
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => setRecipe(data.recipes)); //setRecipe(data.results)
-  // }
+  async function fetchData() {
+    await fetch(
+      `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=8&tags=vegetarian,meal`,
+    )
+      .then((response) => response.json())
+      .catch((err) => console.log('Error:', err))
+      .then((data) => setRecipe(data.recipes));
+    //setRecipe(data.results)
+  }
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
+  //Search Function
   // useEffect(() => {
   //   const fetchRecipes = async () => {
   //     await fetch(
@@ -49,7 +52,7 @@ const Home = () => {
           value={valueSearch}
           onChange={(event) => setValueSearch(event.target.value.toLowerCase())}
         />
-        <i className={style.icon__search}>
+        <i onClick={() => setValueSearch((prev) => (prev = ''))} className={style.icon__search}>
           <IconSearch />
         </i>
       </div>

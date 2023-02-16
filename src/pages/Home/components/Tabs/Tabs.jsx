@@ -1,33 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import style from './Tabs.module.scss';
 
 const Tabs = () => {
-  const [activeTab, setActiveTab] = useState(style.tab);
+  // function getActiveTab() {
+  //   console.log(category);
+  // }
 
-  function getActiveTab() {
-    if (activeTab === style.tab) {
-      setActiveTab(style.active__card);
-    } else if (activeTab === style.active__card) {
-      setActiveTab(style.tab);
-    }
-  }
-
-  const tabs = [
-    {
-      id: 1,
-      value: 'Meals',
-    },
-    { id: 2, value: 'Desserts' },
-    { id: 3, value: 'Side Dish' },
-    { id: 4, value: 'Drinks & Beverages' },
-  ];
+  const categories = ['Meals', 'Desserts', 'Side Dish', 'Drinks & Beverages'];
   return (
     <div className={style.tabs}>
       <div className={style.tabs__wrapper}>
-        {tabs.map((tab) => (
-          <div className={activeTab} key={tab.id} onClick={getActiveTab}>
-            {tab.value}
+        {categories.map((category, index) => (
+          <div
+            className={style.active__category}
+            key={index}
+            onClick={() => {
+              console.log(index, category);
+            }}>
+            {category}
           </div>
         ))}
       </div>

@@ -12,7 +12,7 @@
   flex-wrap: wrap;
 }
 
-.tab {
+.category {
   transition: 0.5s;
   cursor: pointer;
   border-radius: 15px;
@@ -27,7 +27,7 @@
   }
 }
 
-.active__card {
+.active__category {
   transition: 0.5s;
   cursor: pointer;
   border-radius: 15px;
