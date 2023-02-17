@@ -3,6 +3,13 @@
 .home {
   width: 100%;
 }
+.home__wrapper {
+  background: #fff;
+  padding-top: 20px;
+  border-radius: $border-radius;
+  margin: 0 auto;
+  width: 95%;
+}
 .wrapper__text {
   width: 100%;
   border-bottom-left-radius: $border-radius;
@@ -10,7 +17,6 @@
   color: $primary-color;
   text-shadow: 1px 3px 4px rgba(255, 255, 255, 1);
   padding-top: 10px;
-  background: $background-color;
 }
 .sub_title {
   padding-top: 5px;
@@ -37,6 +43,7 @@
   border: 3px solid $secondary-color;
 }
 .input__search {
+  background: #fff;
   border: none;
   padding: 7px;
   width: 80%;
@@ -54,15 +61,16 @@
 //==============Cards============//
 .cards {
   display: flex;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 95%;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 ul.pages {
   color: #b47768;
   font-size: 20px;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-left: 20px;
   margin-bottom: 20px;
   width: 250px;

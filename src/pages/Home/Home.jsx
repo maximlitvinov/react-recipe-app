@@ -9,6 +9,8 @@ import style from './Home.module.scss';
 const Home = () => {
   const [recipe, setRecipe] = useState([]);
   const [valueSearch, setValueSearch] = useState('');
+  const [activePage, setActivePage] = useState(style.list);
+  const pages = [1, 2, 3];
 
   const apiKey = 'cf0da3ccec3b4c6a89fe48aeb8ee8f6a';
 
@@ -37,6 +39,9 @@ const Home = () => {
   //   };
   //   fetchRecipes();
   // }, [valueSearch]);
+  function getActivePage(index) {
+    setActivePage(index);
+  }
 
   return (
     <div className={style.home}>
@@ -44,28 +49,35 @@ const Home = () => {
         <div className={style.sub_title}>Welcome to</div>
         <div className={style.title}> Recipe World</div>
       </div>
-      <div className={style.search}>
-        <input
-          className={style.input__search}
-          type="text"
-          placeholder="Search your favorite recipe"
-          value={valueSearch}
-          onChange={(event) => setValueSearch(event.target.value.toLowerCase())}
-        />
-        <i onClick={() => setValueSearch((prev) => (prev = ''))} className={style.icon__search}>
-          <IconSearch />
-        </i>
-      </div>
-      <Tabs />
-      <div className={style.cards}>
-        {recipe.map((recipe, index) => (
-          <Card recipe={recipe} key={index} />
-        ))}
+      <div className={style.home__wrapper}>
+        <div className={style.search}>
+          <input
+            className={style.input__search}
+            type="text"
+            placeholder="Search your favorite recipe"
+            value={valueSearch}
+            onChange={(event) => setValueSearch(event.target.value.toLowerCase())}
+          />
+          <i onClick={() => setValueSearch((prev) => (prev = ''))} className={style.icon__search}>
+            <IconSearch />
+          </i>
+        </div>
+        <Tabs />
+        <div className={style.cards}>
+          {recipe.map((recipe, index) => (
+            <Card recipe={recipe} key={index} />
+          ))}
+        </div>
       </div>
       <ul className={style.pages}>
-        <li className={style.list}>1</li>
-        <li className={style.list}>2</li>
-        <li className={style.list}>3</li>
+        {pages.map((page, index) => (
+          <li
+            className={activePage === index ? style.active__page : style.list}
+            key={index}
+            onClick={() => getActivePage(index)}>
+            {page}
+          </li>
+        ))}
       </ul>
     </div>
   );

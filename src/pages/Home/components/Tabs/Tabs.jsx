@@ -1,11 +1,13 @@
 import React from 'react';
+import { useState } from 'react';
 
 import style from './Tabs.module.scss';
 
 const Tabs = () => {
-  // function getActiveTab() {
-  //   console.log(category);
-  // }
+  const [activeCategory, setActiveCategory] = useState(style.category);
+  function getActiveTab(index) {
+    setActiveCategory(index);
+  }
 
   const categories = ['Meals', 'Desserts', 'Side Dish', 'Drinks & Beverages'];
   return (
@@ -13,10 +15,10 @@ const Tabs = () => {
       <div className={style.tabs__wrapper}>
         {categories.map((category, index) => (
           <div
-            className={style.active__category}
+            className={activeCategory === index ? style.active__category : style.category}
             key={index}
             onClick={() => {
-              console.log(index, category);
+              getActiveTab(index);
             }}>
             {category}
           </div>
