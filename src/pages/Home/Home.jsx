@@ -5,6 +5,7 @@ import Tabs from './components/Tabs/Tabs';
 import IconSearch from '../../assets/icons/IconSearch';
 
 import style from './Home.module.scss';
+import Recipe from '../Recipe/Recipe';
 
 const Home = () => {
   const [recipe, setRecipe] = useState([]);
@@ -79,6 +80,7 @@ const Home = () => {
           </li>
         ))}
       </ul>
+      <Recipe />
     </div>
   );
 };
