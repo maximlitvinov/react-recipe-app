@@ -3,9 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Card from './components/Card/Card';
 import Tabs from './components/Tabs/Tabs';
 import IconSearch from '../../assets/icons/IconSearch';
-
 import style from './Home.module.scss';
-import Recipe from '../Recipe/Recipe';
 
 const Home = () => {
   const [recipe, setRecipe] = useState([]);
@@ -46,10 +44,6 @@ const Home = () => {
 
   return (
     <div className={style.home}>
-      <div className={style.wrapper__text}>
-        <div className={style.sub_title}>Welcome to</div>
-        <div className={style.title}> Recipe World</div>
-      </div>
       <div className={style.home__wrapper}>
         <div className={style.search}>
           <input
@@ -80,7 +74,6 @@ const Home = () => {
           </li>
         ))}
       </ul>
-      <Recipe />
     </div>
   );
 };
