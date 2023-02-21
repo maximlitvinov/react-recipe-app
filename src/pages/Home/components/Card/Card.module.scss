@@ -2,12 +2,14 @@
 
 .card {
   display: flex;
+  justify-content: center;
   margin-top: 40px;
 }
 .info__block {
   display: flex;
   width: 85%;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   flex-direction: column;
   color: $primary-color;
 }
@@ -27,9 +29,8 @@
   margin-left: 55px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   width: 80%;
-  text-align: left;
+  justify-content: flex-start;
 }
 
 .icon__time,
@@ -45,4 +46,16 @@
   box-shadow: -3px 2px 12px 0px rgba(0, 0, 0, 0.54);
   -webkit-box-shadow: -3px 2px 12px 0px rgba(0, 0, 0, 0.54);
   -moz-box-shadow: -3px 2px 12px 0px rgba(0, 0, 0, 0.54);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 16px;
+  }
+  .subtitle {
+    span,
+    i {
+      font-size: 14px;
+    }
+  }
 }

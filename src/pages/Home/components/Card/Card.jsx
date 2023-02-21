@@ -15,14 +15,14 @@ const Card = ({ recipe }) => {
             <i className={style.icon__time}>
               <IconTimeOutline />
             </i>
-            Ready in: {recipe.readyInMinutes} minutes
+            <span> Ready in: {recipe.readyInMinutes} minutes</span>
           </div>
           <div>
             <span>
               <i className={style.icon__food}>
                 <IconLocationFood />
               </i>
-              Type: {recipe.dishTypes[0]}
+              <span>Type: {recipe.dishTypes[0]}</span>
             </span>
           </div>
         </div>

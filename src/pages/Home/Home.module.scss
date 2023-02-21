@@ -26,7 +26,7 @@
   background: #fff;
   border: none;
   padding: 7px;
-  width: 80%;
+  width: 85%;
   outline: none;
 }
 ::placeholder {
@@ -40,12 +40,16 @@
 }
 //==============Cards============//
 .cards {
-  display: flex;
-  margin: 10px auto;
-  width: 95%;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px 20px;
+  justify-items: center;
   padding-bottom: 20px;
+}
+.cards__wrapper {
+  display: flex;
+  justify-content: center;
 }
 ul.pages {
   color: #b47768;
@@ -86,4 +90,13 @@ ul.pages {
   border-radius: 50%;
   color: #fff;
   background: $primary-color;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .search {
+    width: 80%;
+  }
 }
